@@ -1,0 +1,223 @@
+/*
+    @theme RubyBlue
+    @override-placeholders html, xml, css, sourcecode.js, php
+    @author John W. Long - ported by Clay Loveless
+    @todo specific tweaking for non-PHP sources
+*/
+
+@base {
+    color: #fff;
+    background-color: #121E31;
+    insertion-point-color: #fff;
+    selection-background-color: #253E5A;
+    font-family: "Bitstream Vera Sans Mono", "Espresso Mono";
+    line-height: 110%;
+}
+
+tag, source, sourcecode {
+	spell-check: disabled;
+}
+
+comment, metadata.comment, metadata.comment content {
+    color: #428BDD;
+    font-style: italic;
+}
+
+string,
+function literal.string,
+literal string
+{
+    color: #fff;
+}
+
+string.quoted, string.quoted-alt, 
+string.quoted > delimiter.balanced,
+string.quoted > punctuation.definition.string {
+    color: #1DC116;
+}
+
+string.quoted > escape {
+    color: #EDDD37;
+}
+
+keyword {
+    color: #F8BB00;
+}
+
+
+function-call, name {
+    color: #B43D3D;
+    font-weight: normal;
+}
+
+function > name {
+    color: #fff;
+    font-weight: normal;
+}
+
+delimiter.separator.comma,
+delimiter.balanced,
+open-bracket, close-bracket {
+    color: #fff;
+}
+
+delimiter.pointer,
+delimiter.separator.pairing,
+keyword.operator,
+operator {
+    color: #8AA6C1;
+    font-weight: normal;
+}
+
+constant.numeric, constant.language {
+    color: #EDDD3D;
+    background-color: #121E31;
+}
+
+constant.language.null {
+    color: #8AA6C1;
+    font-weight: normal;    
+}
+
+/* CSS */
+css zconstant.nzumeric { color: #EDDD3D; }
+css zkeyword.other.zunit { color: #F8BB00; }
+css punctuation.definition.constant,
+css zconstant.zother.color.rgb-value,
+css support.function.misc { 
+    color: #B43D3D; 
+}
+css variable.parameter { color: #8AA6C1; font-style: italic; }
+
+/* HTML */
+tag, tag > name, tag > string {
+    color: #8AA6C1;
+}
+
+tag > string.quoted,
+attribute-with-value > string.quoted,
+attribute-with-value > string.quoted > punctuation  {
+    color: #1DC116;
+}
+
+tag.doctype, tag.doctype > *, tag.doctype entity.name {
+    color: #428BDD;
+    font-style: italic;
+}
+
+embedded-javascript {
+    background-color: rgba(33,55,79, 0.5);
+}
+
+/* PHP */
+php delimiter.balanced.quote,
+php literal.string.quoted,
+php literal.string.quoted identifier.variable,
+php literal.string.quoted identifier.variable > operator.dollar-sign.variable.begin {
+    color: #1DC116;
+}
+
+php literal.keyword.nothing,
+php literal.keyword.bool {
+    color: #8AA6C1;
+    font-weight: normal;
+}
+
+php integer, php literal.numeric {
+    color: #EDDD3D;
+    background-color: #121E31;    
+}
+
+php identifier.variable,
+php identifier.variable.parameter,
+php identifier.variable.parameter > variable.delimiter.begin,
+php identifier.variable > operator.dollar-sign.variable.begin {
+    color: #fff;
+}
+
+php metadata.comment.phpDoc.block {
+    background-color: rgba(33,55,79, 0.5);
+}
+php metadata.comment.phpDoc.keyword {
+    color: #F8BB00;
+}
+
+php keyword.modifier.scope {
+    color: #fff;
+}
+php keyword.definition.php {
+    color: #fff;
+}
+php identifier.class.name,
+php keyword.definition.class.begin,
+php container.class name {
+    color: #fff;
+}
+
+php class.extended > name {
+    color: #fff;
+    font-style: italic;
+}
+
+php keyword.function.definition {
+    color: #fff;
+}
+
+php container.function.magic.parenthesis-delimited > name,
+php keyword.definition.array,
+php identifier.function,
+php identifier.function.support > name,
+php identifier.function.support_pcre > name,
+php identifier.function.support_pcre literal.string.quoted,
+php identifier.function.support_pcre > delimiter.balanced.parenthesis + literal.string.quoted delimiter.balanced.quote {
+    color: #B43D3D;
+    font-weight: normal;
+}
+
+php identifier.function.support > delimiter.balanced.parenthesis {
+    color: #fff;
+}
+
+php delimiter.balanced.parenthesis.begin + keyword.constant.other,
+php > keyword.constant.class,
+php keyword.constant.std,
+php keyword.constant.class.other > class.name,
+php keyword.constant.class.other > operator.scope.resolution,
+php identifier.function.class.method.static class.name,
+php identifier.function.class.method.static method.name,
+php identifier.variable.class.static.property property.name {
+    color: #fff;
+    font-weight: normal;
+}
+
+php container keyword.constant.other,
+php > keyword.constant.other,
+php keyword.constant.class.other > keyword.constant.other {
+    color: #B53B3C;
+}
+
+php container.function.parenthesis-delimited > name,
+php > identifier.function.object.method > name {
+    color: #fff;
+    font-weight: normal;
+}
+
+php > identifier.function.object.method > identifier.variable.object.property,
+php > identifier.function.object.method > identifier.variable.instance.class,
+php > identifier.function.object.method > identifier.variable.instance.class > operator.dollar-sign.variable.begin,
+php > identifier.variable.instance.class > operator.dollar-sign.variable.begin,
+php > identifier.variable.instance.class {
+    color: #fff;
+    font-weight: normal;
+}
+
+/* special case for: $class = __CLASS__; */
+php operator.accessor + keyword.constant.other {
+    color: #8AA6C1;
+}
+
+
+/* Ruby */
+/* @todo elliottcable's Ruby sugar just doesn't differentiate enough between
+         types to make a practical port. There's currently no way to get 
+         a .rb file to look similar to how it looks in TextMate. */
