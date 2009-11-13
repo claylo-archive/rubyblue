@@ -23,6 +23,14 @@ To install:
 2. Copy it to: ~/vim/colors/
 3. Add `colorscheme rubyblue` to your ~/.vimrc file
 
+== Espresso
+
+To install:
+
+1. Download RubyBlue.css
+2. Copy it to ~/Library/Application\ Support/Espresso/Themes/
+3. Switch to theme under: Preferences > Colors
+
 == Licence
 
   Copyright (c) 2009, John W. Long.
