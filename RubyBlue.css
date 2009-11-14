@@ -30,6 +30,8 @@ literal string
     color: #fff;
 }
 
+literal.string > *,
+literal.string.quoted,
 string.quoted, string.quoted-alt, 
 string.quoted > delimiter.balanced,
 string.quoted > punctuation.definition.string {
@@ -44,6 +46,9 @@ keyword {
     color: #F8BB00;
 }
 
+literal.numeric {
+    color: #EDDD3D;
+}
 
 function-call, name {
     color: #B43D3D;
@@ -218,6 +223,25 @@ php operator.accessor + keyword.constant.other {
 
 
 /* Ruby */
-/* @todo elliottcable's Ruby sugar just doesn't differentiate enough between
-         types to make a practical port. There's currently no way to get 
-         a .rb file to look similar to how it looks in TextMate. */
+/* 
+@todo elliottcable's Ruby sugar just doesn't differentiate enough between
+    types to make a practical port. There's currently no way I can see
+    to get a .rb file to look similar to how it looks in TextMate. 
+    Patches welcome!
+*/
+
+
+/* Python */
+python identifier.variable.parameter > name {
+    color: #8AA6C1;
+    font-style: italic;
+}
+
+python identifier.function.builtin > name {
+    color: #B43D3D;
+    font-weight: normal;
+}
+
+python literal.string.quoted {
+    color: #1DC116;
+}
