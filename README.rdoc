@@ -29,7 +29,8 @@ To install:
 
 1. Download RubyBlue.css
 2. Copy it to ~/Library/Application\ Support/Espresso/Themes/
-3. Switch to theme under: Preferences > Colors
+3. Restart Espresso
+4. Switch to theme under: Preferences > Colors
 
 == Licence
 
